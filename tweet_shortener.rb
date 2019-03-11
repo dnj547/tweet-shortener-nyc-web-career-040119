@@ -14,17 +14,17 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  tweet.split.each do |word|
-    dictionary.each do |key, value|
-      if word == key
-        word = value
-        binding.pry
-      end
+  tweet.split.collect do |word|
+    if dictionary.keys.include?(word.downcase)
+      word = dictionary[word.downcase]
+    else
+      word
     end
-  end
+  end.join(" ")
 end
 
 def bulk_tweet_shortener(tweets)
+  tweets.each {|tweet| word_substituter(tweet)}
 end
 
 def selective_tweet_shortener(tweet)
