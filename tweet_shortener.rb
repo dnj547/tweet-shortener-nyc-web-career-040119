@@ -1,3 +1,4 @@
+require 'pry'
 def dictionary
   dictionary_hash = {
     "hello" => "hi",
@@ -16,6 +17,7 @@ def word_substituter(tweet)
   tweet.split.each do |word|
     dictionary_hash.each do |key, value|
       if word == key
+        binding.pry
         word = value
       end
     end
