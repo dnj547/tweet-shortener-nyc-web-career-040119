@@ -17,7 +17,7 @@ def word_substituter(tweet)
     dictionary_hash.each do |key, value|
       if word == key
         word = value
-      end  
+      end
     end
   end
 end
