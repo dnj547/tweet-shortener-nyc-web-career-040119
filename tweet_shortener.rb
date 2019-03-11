@@ -1,16 +1,21 @@
 def dictionary
   dictionary_hash = {
-    "hi" => "hello",
-    "2" => ["to", "two", "too"],
-    "4" => ["for", "four"],
-    "b" => "be",
-    "@" => "at",
-    "&" => "and"
+    "hello" => "hi",
+    "to" => "2",
+    "two" => "2",
+    "too" => "2",
+    "for" => "4",
+    "four" => "4",
+    "be" => "b",
+    "at" => "@",
+    "and" => "&"
   }
 end
 
 def word_substituter(tweet)
-  tweet
+  tweet.split.each do |word|
+    if word
+  end  
 end
 
 def bulk_tweet_shortener(tweets)
