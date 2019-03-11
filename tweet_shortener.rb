@@ -19,7 +19,6 @@ def word_substituter(tweet)
       if word == key
         word = value
       end
-      binding.pry
     end
   end
 end
